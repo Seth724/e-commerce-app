@@ -1,0 +1,25 @@
+{
+  "json.schemaDownload.enable": false,
+  "json.validate.enable": false,
+  "json.schemas": [
+    {
+      "fileMatch": ["package.json"],
+      "schema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "name": { "type": "string" },
+          "version": { "type": "string" },
+          "description": { "type": "string" },
+          "main": { "type": "string" },
+          "scripts": { "type": "object" },
+          "dependencies": { "type": "object" },
+          "devDependencies": { "type": "object" },
+          "private": { "type": "boolean" }
+        }
+      }
+    }
+  ],
+  "json.schemaStore.enable": false
+}
