@@ -57,26 +57,29 @@
   padding: 4px;
 }
 
-/* Updated quantity button styling */
+/* Enhanced quantity button styling */
 .quantityButton {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
-  border: none;
-  background: transparent;
+  font-weight: 700;
+  border: 2px solid var(--border-color);
+  background: var(--card-bg);
   color: var(--text-primary);
   cursor: pointer;
-  transition: all 0.2s ease;
-  border-radius: 4px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 6px;
+  font-size: 14px;
 }
 
 .quantityButton:hover {
-  background: var(--primary-color);
+  background: var(--primary-gradient);
   color: #000;
+  border-color: var(--primary-color);
+  transform: scale(1.1);
 }
 
 .quantity {
@@ -94,23 +97,25 @@
   font-size: 16px;
 }
 
-/* Updated remove button styling */
+/* Enhanced remove button styling */
 .removeButton {
   white-space: nowrap;
-  padding: 6px 12px;
+  padding: 8px 12px;
   background: transparent;
-  color: #ef4444;
-  border: 1px solid #ef4444;
+  color: var(--danger-color);
+  border: 2px solid var(--danger-color);
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
-  font-size: 12px;
-  transition: all 0.2s ease;
+  font-size: 11px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .removeButton:hover {
-  background: #ef4444;
+  background: var(--danger-gradient);
   color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
 }
 
 @media (max-width: 768px) {

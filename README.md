@@ -83,10 +83,11 @@ lib/
 
 ### Understanding the Code
 
-**State Management (No Zustand!):**
-- Uses React Context API for simplicity
-- `lib/cart-context.tsx` - Cart state provider
-- `useCart()` hook - Access cart anywhere
+**State Management with Zustand:**
+- Uses Zustand for efficient state management
+- `lib/cart-context.tsx` - Cart state store
+- `useCart()` hook - Access cart state anywhere
+- Lightweight alternative to Redux
 
 **Responsive Design:**
 - CSS Grid with `auto-fill` and `minmax()`

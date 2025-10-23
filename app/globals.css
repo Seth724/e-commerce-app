@@ -41,6 +41,22 @@
   /* Primary Colors */
   --primary-color: #00d4ff;
   --primary-hover: #00b8d4;
+  --primary-gradient: linear-gradient(135deg, #00d4ff, #0ea5e9);
+  
+  /* Success Colors */
+  --success-color: #10b981;
+  --success-hover: #059669;
+  --success-gradient: linear-gradient(135deg, #10b981, #047857);
+  
+  /* Danger Colors */
+  --danger-color: #ef4444;
+  --danger-hover: #dc2626;
+  --danger-gradient: linear-gradient(135deg, #ef4444, #b91c1c);
+  
+  /* Secondary Colors */
+  --secondary-color: #6366f1;
+  --secondary-hover: #4f46e5;
+  --secondary-gradient: linear-gradient(135deg, #6366f1, #4338ca);
 
   /* Background Colors */
   --bg-primary: #0f1419;
