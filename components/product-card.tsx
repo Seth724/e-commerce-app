@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useCart } from "@/lib/cart-context"
 import type { Product } from "@/lib/products.ts"
 import styles from "./product-card.module.css"
@@ -21,15 +22,21 @@ export function ProductCard({ product }: ProductCardProps) {
       image: product.image,
     })
 
-    if (typeof window !== "undefined" && (window as any).showToast) {
-      ;(window as any).showToast(`${product.name} added to cart!`, "success")
+    if (typeof window !== "undefined" && window && 'showToast' in window) {
+      ;(window as { showToast: (message: string, type: string) => void }).showToast(`${product.name} added to cart!`, "success")
     }
   }
 
   return (
     <div className={styles.card}>
       <div className={styles.imageContainer}>
-        <img src={product.image || "/placeholder.svg"} alt={product.name} className={styles.image} />
+        <Image 
+          src={product.image || "/placeholder.svg"} 
+          alt={product.name} 
+          className={styles.image}
+          width={300}
+          height={300}
+        />
       </div>
       <div className={styles.content}>
         <h3 className={styles.name}>{product.name}</h3>

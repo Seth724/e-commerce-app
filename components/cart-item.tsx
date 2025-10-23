@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useCart } from "@/lib/cart-context"
 import type { CartItem as CartItemType } from "@/lib/cart-context"
 import styles from "./cart-item.module.css"
@@ -13,7 +14,13 @@ export function CartItem({ item }: CartItemProps) {
 
   return (
     <div className={styles.item}>
-      <img src={item.image || "/placeholder.svg"} alt={item.name} className={styles.image} />
+      <Image 
+        src={item.image || "/placeholder.svg"} 
+        alt={item.name} 
+        className={styles.image}
+        width={80}
+        height={80}
+      />
 
       <div className={styles.details}>
         <h3 className={styles.name}>{item.name}</h3>

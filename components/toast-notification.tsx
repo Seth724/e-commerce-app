@@ -41,7 +41,7 @@ export function ToastContainer() {
 
   // Expose global function to add toasts
   useEffect(() => {
-    ;(window as any).showToast = (message: string, type: "success" | "error" | "info" = "success") => {
+    ;(window as { showToast?: (message: string, type: "success" | "error" | "info") => void }).showToast = (message: string, type: "success" | "error" | "info" = "success") => {
       const id = Date.now().toString()
       setToasts((prev) => [...prev, { id, message, type }])
 
